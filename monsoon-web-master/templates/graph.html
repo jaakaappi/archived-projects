@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My Webpage</title>
+    <link href="static/c3.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="static/style.css">
+    <script src="static/d3.min.js" charset="utf-8"></script>
+    <script src="static/c3.min.js"></script>
+    <script src="static/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<div id="chart"></div>
+<script>
+    var chart = c3.generate({   
+        bindto: '#chart',
+        data: {
+            xs: {{ xs | safe }},
+            columns:{{ data|safe }}
+        },
+        axis: {
+            x: {
+                type: 'timeseries',
+                tick: {
+                    format: '%d.%m.'
+                }
+            },
+            y: {
+                tick: {
+                    format: d3.format('.2f')
+                }
+            }
+        },
+        legend: {},
+        padding: {
+            right: 25
+        }
+    });
+
+    $("#chart").css('position', 'absolute').css('top', (window.innerHeight / 2 - $("#chart").innerHeight() / 2));
+
+    window.onresize = function () {
+        $("#chart").css('position', 'absolute').css('top', (window.innerHeight / 2 - $("#chart").innerHeight() / 2));
+    };
+
+    var socket = new WebSocket("ws://0.0.0.0:8080/ws");
+
+    function updateData() {
+        if (socket.readyState === 1) {
+            console.log("sent update");
+            socket.send("update");
+        } else {
+            socket = new WebSocket("ws://0.0.0.0:8080/ws");
+        }
+        setTimeout(updateData, 5000);
+    }
+
+    socket.onmessage = function (event) {
+        console.log("got update");
+        var data = JSON.parse(event.data);
+        chart.load({
+            xs: data.xs,
+            columns: data.data
+        });
+    };
+
+    $(document).ready(function () {
+        setTimeout(updateData, 5000);
+    });
+
+</script>
+</body>
+</html>

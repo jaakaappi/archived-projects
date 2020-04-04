@@ -1,0 +1,37 @@
+body {
+    margin: 0;
+    background-color: black;
+    color: white;
+    font-family: Inconsolata;
+}
+
+#chart {
+    width: 100%;
+}
+
+#chart .c3-line-humidity {
+    stroke-width: 5px;
+}
+
+.c3-axis {
+    stroke: white;
+}
+
+.c3 .c3-axis-x path, .c3 .c3-axis-x line {
+    stroke: white;
+    stroke-width: 3px;
+}
+
+.c3 .c3-axis-y path, .c3 .c3-axis-y line {
+    stroke: white;
+    stroke-width: 3px;
+}
+
+.c3-legend-item {
+    fill: white;
+}
+
+h3 {
+    text-align: center;
+    font-size: 32px;
+}

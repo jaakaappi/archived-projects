@@ -1,0 +1,12 @@
+Software
+- Reading values and pushing to server
+- Using pumps
+- Showing data
+- Air bubble removal when changing water
+- Stop watering if humidity is not rising
+
+Hardware
+- Capacitive sensors
+- More powerful pumps?
+- Mount to a board
+- Replace multiple pumps with N-way valve

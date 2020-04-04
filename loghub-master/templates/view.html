@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../bootstrap.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <script src="../bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container bg">
+    <div class="row">
+        <div class="col-md-4">
+        Name: {{log_name}}</div>
+        <div class="col-md-4">
+        Entries: {{entry_count}}</div>
+        <div class="col-md-4">
+        Last entry: {{last_entry}}</div>
+    </div>
+    <div class="row">
+    </div>
+</div>
+
+<script>
+	var data = {{ data|tojson|safe }}
+</script>
+</body>
+</html>

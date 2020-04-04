@@ -1,0 +1,23 @@
+.MenuItem {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    font-weight: bold;
+}
+
+.MenuItem:hover {
+    background-color: #4f5d75;
+}
+
+.focus {
+    border-right: solid #ef8354 2px;
+}
+
+i {
+    margin-left: 1em;
+}
+
+p {
+    margin-left: 1em;
+}

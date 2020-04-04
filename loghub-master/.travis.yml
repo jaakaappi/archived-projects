@@ -1,0 +1,14 @@
+language: python
+python:
+  - "3.6"
+install:
+  - pip install pipenv codecov
+  - pipenv install
+services:
+  - redis-server
+before_script:
+- flake8 .
+script:
+- coverage run tests.py
+after_success:
+- codecov

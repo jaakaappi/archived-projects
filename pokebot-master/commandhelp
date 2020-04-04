@@ -1,0 +1,19 @@
+**!aamuja ERÄ VUOSI KESTO**
+
+Rekisteröi kanavan
+
+-ERÄ: 1, 2
+-VUOSI: vuosiluvun kaksi viimeistä numeroa
+-KESTO: 165, 255 tai 347
+
+esim: !apua 2 17 347
+
+**!pokemon**
+
+Näyttää päivän pokemonin
+
+**!nytvitturiittää**
+
+Poistaa kanavan rekisteröinnin
+
+Pokemonien kuvat The Artificial (CC-BY) https://theartificial.com/pokemonicons/

@@ -1,0 +1,27 @@
+[
+  {
+    "name": "exit",
+    "description": "close the application",
+    "command": "exit"
+  },
+  {
+    "name": "add",
+    "description": "Add a word",
+    "command": "add_word"
+  },
+  {
+    "name": "from",
+    "description": "Quiz with translating words from foreign language",
+    "command": "from_foreign"
+  },
+  {
+    "name": "to",
+    "description": "Quiz with translating words to foreign language",
+    "command": "to_foreign"
+  },
+  {
+    "name": "help",
+    "description": "Shows this help",
+    "command": "print_help"
+  }
+]

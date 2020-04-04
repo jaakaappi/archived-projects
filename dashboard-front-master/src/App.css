@@ -1,0 +1,13 @@
+.App {
+  background: linear-gradient(#4f5d75, #2d3142);
+  color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+  height: 100%;
+  text-align: center;
+}
+
+a{
+  color: #e3e5e5;
+  text-decoration: none;
+  font-weight: bold;
+}
